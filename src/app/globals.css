@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@600&display=swap');
+/* global.css */
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/path/to/fonts/SFProDisplay-Regular.woff2') format('woff2'),
+         url('/path/to/fonts/SFProDisplay-Regular.woff') format('woff');
+    font-weight: 200,300,400,500,600,700,800,900;
+  }
+  .custom-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #D3D3D3;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-checkbox:checked {
+  background-color: #000;
+  border-color: #000;
+}
+/* Add a custom checkmark when checked */
+input[type="checkbox"]:checked::before {
+     content: '';
+     position: absolute;
+     top: 2px;
+     left: 7px;
+     width: 10px;
+     height: 16px;
+     border: solid white;
+     border-width: 0 4px 4px 0;
+     transform: rotate(45deg);
+ }
+  /* Add this in your global.css or Tailwind CSS file */
+.carousel .control-prev.control-arrow, .carousel .control-next.control-arrow {
+  display: none;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-control {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.carousel-control:hover {
+  transform: scale(1.2);
+}
+.pagination {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+.page-item {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.page-link {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+.active .page-link {
+  font-weight: bold;
+  color: #fff;
+  background-color: #0070f3;
+}
+
+.page-item:hover .page-link {
+  background-color: #f0f0f0;
+}
+
+
+
